@@ -1,0 +1,81 @@
+include "Mousavi.SeyedSadra.401243089.problem3.module";
+
+module ALU_6bit_tb();
+	reg [5:0]a;
+	reg [5:0]b;
+	reg [1:0]op;
+	wire [5:0]out;
+		
+	ALU_6bit temp(a, b, out, op);
+
+	initial begin
+	a = -20;
+	b = -30;
+	op = 0;
+	#50
+	a = 3;
+	b = 2;
+	op = 1;
+	#50;
+	a = 12;
+	b = 32;
+ 	op = 2;
+	#50;
+	a = 10;
+	b = 21;
+	op = 3;
+	#50;
+	a = 1;
+	b = 1;
+	op = 0;
+	#50;
+	a = 10;
+	b = 8;
+	op = 1;
+	#50;
+	a = 6'b000110;
+	b = 6'b000100;
+	op = 0;
+	#50;
+	a = 21;
+	b = 6'b000110;
+	op = 2;
+	#50;
+	a = -10;
+	b = 20;
+	op = 3;
+	#50;
+	a = 4;
+	b = 6;
+	op = 0;
+	#50;
+	a = 20;
+	b = 20;
+	op = 1;
+	#50;
+	a = 21;
+	b = -21;
+	op = 2;
+	#50;
+	a = 10;
+	b = 5;
+	op = 3;
+	#50;
+	a = -10;
+	b = -5;
+	op = 0;
+	#50;
+	a = -10;
+	b = -5;
+	op = 1;
+	#50;
+	a = 32;
+	b = 21;
+	op = 2;
+	#50;
+	a = 15;
+	b = 30;
+	op = 3;
+	#50;
+	end
+endmodule
